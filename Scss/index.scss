@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+@import "./varibalse.scss";
+.radio-buttons {
+  background: #ffffff;
+  border-radius: 40px;
+  min-width: 622px;
+  min-height: 445px;
+  display: flex;
+}
+.tittle__items {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #596172;
+  margin-top: 42px;
+  margin-right: 10px;
+}
+
+.radio-button__column {
+  flex: 0 1 50%;
+}
+.radio-button__tittle--row {
+  display: flex;
+}
+.tittle__items--color {
+  font-weight: 300;
+  color: #949fb7;
+  margin-right: 0;
+}
+.container {
+  margin-left: 50px;
+}
+
+.radio-button__type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 220px;
+}
+.type__items:first-child {
+  margin-top: 50px;
+}
+.type__items:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.type {
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* 4 */
+
+  color: #c1c8d7;
+}
+.type__column {
+  min-height: 70%;
+  max-width: 85%;
+}
+
+.radio-button--hover:hover {
+  background: #639ef8;
+  cursor: pointer;
+}
+.radio-button--disabled:disabled {
+  background: #bfd8fc;
+}
+.radio-button--pressed:active {
+  background: #2a7bf5;
+}
+.radio-button--secondary {
+  background: #ffffff;
+  color: #4690ff;
+  border: 1px solid #4690ff;
+}
+.radio-button--secondary--hover:hover {
+  background: #f1f7ff;
+  color: #639ef8;
+  border-color: #639ef8;
+}
+.radio-button--secondary:disabled {
+  opacity: 0.3;
+  border-color: #4690ff;
+}
+.radio-button--secondary--pressed:active {
+  background: #e4f0ff;
+  border: 1px solid #2a7bf5;
+}
+/*---------------Линия---------------------*/
+
+.type__items:not(:last-child)::after {
+  content: "";
+  display: block;
+  max-width: 220px;
+  margin-top: 15px;
+  height: 1px;
+  background-color: #dddddd;
+}
+/*----------------checkbox----------------*/
+// .checkbox {
+//   position: absolute;
+//   z-index: -1;
+//   opacity: 0;
+// }
+// .checkbox + label {
+//   display: inline-flex;
+//   align-items: center;
+//   user-select: none;
+// }
+// .checkbox + label::before {
+//   content: "";
+//   display: inline-block;
+//   width: 1.2em;
+//   height: 1.2em;
+//   flex-shrink: 0;
+//   flex-grow: 0;
+//   border: 2px solid #4690ff;
+//   border-radius: 0.25em;
+//   margin-right: 0.5em;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-size: 50% 50%;
+// }
+// .checkbox:checked + label::before {
+//   background: url("../V.svg") center no-repeat;
+// }
+// .checkbox--pressed:checked + label::before {
+//   background: url("../V_2.svg") center no-repeat;
+// }
+/*--------------------------------------------------------------*/
+._radio-button input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+#check {
+  width: 16px;
+  height: 16px;
+}
+._radio-button label {
+  position: relative;
+  display: inline-block;
+
+  padding-left: 35px;
+}
+
+._radio-button label::before,
+._radio-button label::after {
+  position: absolute;
+  content: "";
+
+  display: inline-block;
+}
+._radio-button label::before {
+  height: 18px;
+  width: 18px;
+  border: 2px solid #4690ff;
+  border-radius: 50%;
+  left: 0px;
+  top: 3px;
+}
+._radio-button label::after {
+  width: 10px;
+  height: 10px;
+  background: #4690ff;
+  border-radius: 50%;
+  left: 4px;
+  top: 7px;
+}
+.radio-button--hover + label:hover::before {
+  background-color: #ecf4ff;
+}
+.radio-button--pressed + label:active::before {
+  background: #c3dbff;
+  border-color: #2a7bf5;
+}
+.radio-button--disabled:disabled + label::after {
+  border-color: #dddddd;
+  background: #dddddd;
+}
+.label--disabled {
+  color: #dddddd !important;
+}
+.radio-button--disabled:disabled + label::before {
+  border-color: #dddddd;
+}
+/*--------------------------------------------------------------*/
+._radio-button input[type="radio"] + label::after {
+  content: "";
+}
+._radio-button input[id="check _off"] + label::after {
+  content: none;
+}
+/*--------------------------------------------------------------*/
+.label {
+  font-weight: 300;
+  color: #000000;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+/*--------------------------------------------------------------*/
