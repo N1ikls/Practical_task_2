@@ -153,8 +153,10 @@
   width: 18px;
   border: 2px solid #4690ff;
   border-radius: 50%;
-  left: 0px;
-  top: 3px;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 ._radio-button label::after {
@@ -162,8 +164,10 @@
   height: 10px;
   background: #4690ff;
   border-radius: 50%;
-  left: 4px;
-  top: 7px;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .radio-button--hover + label:hover::before {
